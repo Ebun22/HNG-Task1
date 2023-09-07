@@ -17,11 +17,11 @@ function currentTime() {
         meridiem = "AM"
     }
 
-    const time = `${hour}:${minute} ${meridiem}`
+    const time = `${hour}:${minute < 10 ? "0" + minute : minute } ${meridiem}`
     HTMLTime.textContent = time;
     HTMLDayOfTheWeek.textContent = daysOfTheWeek[day]
    
 }
 
 currentTime();
-setInterval(currentTime(), 1000)
+setInterval(currentTime, 1000)

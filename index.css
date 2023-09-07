@@ -45,7 +45,7 @@ body {
 
 #profile_pic {
     width: 100%;
-    height: 100%;
+    height: 590px;
 }
 
 .overlay {
@@ -91,28 +91,102 @@ body {
     margin-bottom: 40px;
 }
 
-#time {
-    margin: 0;
-    margin-top: 22px;
-}
-
 #day {
-    font-weight: medium;
+    font-weight: 500;
     font-size: 2.5em;
     margin: 0;
 }
+
+#time {
+    margin: 0;
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-left: 5px;
+    font-weight: 100;
+    font-stretch: ultra-expanded;
+    color: #c9c9c9;
+}
+
 
 .code_cont {
     font-weight: medium;
     font-size: 1em;
     margin: 0;
 }
-#git_code{
+
+#git_code {
     font-size: 0.8em;
     color: #fff;
     text-decoration: none;
+    font-style: italic;
+    color: #c9c9c9;
 }
-#git_code:hover{
+
+#git_code:hover {
     cursor: pointer;
-    text-decoration:underline;
+    text-decoration: underline;
+
+}
+
+@media screen and (max-width: 870px) {
+    html {
+        box-sizing: border-box;
+        overflow-y: auto;
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    body {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+    }
+
+    .left_container {
+        width: 100%;
+        min-height: 200px;
+        height: 250px;
+    }
+    #profile_pic {
+        width: 40%;
+        height: 100%;
+        border-radius: 50%;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        justify-self: center;
+    }
+    .left_container::before {
+        width: 0;
+    }
+
+    .right_container {
+        display:block;
+        width: 90%;
+        height: 100%;
+        margin: 0px 20px;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        background: linear-gradient(to right,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 1));
+    }
+    .time{
+        width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    #time{
+        text-align: center;
+    }
 }
