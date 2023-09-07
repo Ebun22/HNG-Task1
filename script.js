@@ -17,7 +17,7 @@ function currentTime() {
         meridiem = "AM"
     }
 
-    const time = `${hour}:${minute < 10 ? "0" + minute : minute } ${meridiem}`
+    const time = `${hour > 12 ? hour - 12 : hour}:${minute < 10 ? "0" + minute : minute } ${meridiem}`
     HTMLTime.textContent = time;
     HTMLDayOfTheWeek.textContent = daysOfTheWeek[day]
    
