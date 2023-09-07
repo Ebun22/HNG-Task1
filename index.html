@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="index.css" rel="stylesheet" type="text/css">
     <title>HNG Stage One</title>
 </head>
+
 <body>
     <div class="left_container">
-        <img src="images/profile-pic.jpg" alt="Ebunoluwa David-Suberu" data-testid="slackDisplayImage" id="profile_pic"/>
+        <img src="images/profile-pic.jpg" alt="Ebunoluwa David-Suberu" data-testid="slackDisplayImage"
+            id="profile_pic" />
+            <div class="overlay"></div>
     </div>
-    
+
     <div class="right_container">
         <p data-testid="slackUserName" id="name">Ebunoluwa David-Suberu</p>
-        <p data-testid="currentDayOfTheWeek" id="day">Tuesday</p>
-        <p data-testid="currentUTCTime" id="time">time</p>
         <p data-testid="myTrack" id="track">Frontend</p>
-        <p class="code_cont">Source Code: <alt href="https://github.com/Ebun22/HNG-Task1.git" target="_blank" data-testid="githubURL" id="git_code">Get the code here.</alt></p>
+        <div class="time">
+            <p data-testid="currentDayOfTheWeek" id="day">Tuesday</p>
+            <p data-testid="currentUTCTime" id="time">time</p>
+        </div>
+        <p class="code_cont">Source Code: <a href="https://github.com/Ebun22/HNG-Task1.git" target="_blank"
+                data-testid="githubURL" id="git_code">Get the code here.</a>
+        </p>
     </div>
 </body>
+
 </html>
